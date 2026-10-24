@@ -1,0 +1,281 @@
+
+/* ===== General Settings ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f5;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    /* Image is loaded from your local project folder */
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(10, 27, 27, 0.88) 0%,
+            rgba(10, 27, 27, 0.68) 42%,
+            rgba(10, 27, 27, 0.12) 100%
+        ),
+        url("./nurse-heart.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+}
+
+/* ===== Navigation Bar ===== */
+.navbar {
+    width: 100%;
+    padding: 28px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #69d6bd;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: #69d6bd;
+}
+
+/* ===== Hero Content ===== */
+.hero-content {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    padding: 50px 7% 100px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    width: 100%;
+    max-width: 590px;
+    display: text-center;
+}
+
+/* Small Heading Above Main Hook */
+.eyebrow {
+    display: inline-block;
+
+    color: #8ce4d0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+}
+
+/* Main Hook */
+.hero h1 {
+    color: #ffffff;
+
+    font-size: clamp(40px, 5vw, 68px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -2.5px;
+
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: #77dfc6;
+}
+
+/* Description */
+.hero-description {
+    max-width: 490px;
+
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 16px;
+    line-height: 1.85;
+
+    margin-bottom: 32px;
+}
+
+/* ===== Call To Action Buttons ===== */
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    min-height: 54px;
+    padding: 0 25px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Primary Button */
+.btn-primary {
+    background: #69d6bd;
+    color: #10352f;
+    border: 1px solid #69d6bd;
+}
+
+.btn-primary:hover {
+    background: #8ce4d0;
+}
+
+/* Secondary Button */
+.btn-secondary {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* Small Text Under Buttons */
+.hero-note {
+    margin-top: 25px;
+
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* ===== Tablet and Mobile ===== */
+@media (max-width: 768px) {
+    .hero {
+        background-position: 58% center;
+
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(10, 27, 27, 0.88) 0%,
+                rgba(10, 27, 27, 0.52) 100%
+            ),
+            url("./nurse-heart.jpeg");
+    }
+
+    .navbar {
+        padding: 23px 6%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-links .about-link {
+        display: none;
+    }
+
+    .hero-content {
+        padding: 65px 6% 85px;
+    }
+
+    .hero-text {
+        max-width: 530px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 9vw, 56px);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        max-width: 420px;
+        font-size: 14px;
+    }
+}
+
+/* ===== Small Phones ===== */
+@media (max-width: 420px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+        max-width: 290px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
