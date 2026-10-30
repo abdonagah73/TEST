@@ -1,35 +1,297 @@
-```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NurseHub</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Re3aya | Home Nursing &amp; Medical Care</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/home-style.css">
 </head>
+
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
+  <!-- Navbar Start -->
+  <header class="sticky-top">
+    <nav class="navbar bg-white shadow-sm py-3">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
 
-        <a href="index.html" class="logo">Nurse<span>Hub</span></a>
+        <a class="navbar-brand fw-bold fs-3 text-dark text-decoration-none m-0" href="index.html">
+          Re<span class="brand-accent">3aya</span>
+        </a>
 
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#find-nurse">Find a Nurse</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <ul
+          class="nav justify-content-center gap-1 gap-md-2 order-3 order-lg-2 w-100 w-lg-auto pt-2 pt-lg-0 nav-mobile-divider">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/services.html">Services &amp; Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Find a Nurse</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
 
-        <div class="auth-links">
-            <a href="login.html" class="book-btn">Sign In</a>
-            <a href="signin.html?type=client" class="book-btn">New Client</a>
-            <a href="signin.html?type=nurse" class="book-btn">New Nurse</a>
+        <div class="d-flex align-items-center gap-2 order-2 order-lg-3">
+          <a href="pages/login.html" class="btn btn-outline-teal px-3 py-2 rounded-3 fw-semibold">Sign In</a>
+          <a href="pages/signin.html" class="btn btn-teal px-3 px-md-4 py-2 rounded-3 fw-bold">Create Account</a>
         </div>
 
+      </div>
     </nav>
+  </header>
+  <!-- Navbar End -->
+
+  <main>
+
+    <!-- Hero Section Start (Centered) -->
+    <section id="hero" class="hero-section py-5">
+      <div class="container py-4 py-lg-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-9 col-xl-8 text-center">
+
+            <span class="hero-eyebrow mb-4">
+              <i class="fa-solid fa-heart-pulse me-2"></i>Compassionate Care, Closer to Home
+            </span>
+
+            <h1 class="hero-title text-white mb-4">
+              The Right Nurse.<br>
+              The Right Care.<br>
+              <span class="hero-highlight">Peace of Mind.</span>
+            </h1>
+
+            <p class="hero-description mx-auto mb-4">
+              Finding the right care for your loved ones should be simple.
+              Discover licensed nursing professionals on <strong>Re3aya</strong> who monitor patient health,
+              run home lab tests, and manage medications just like being in a hospital.
+            </p>
+
+            <div
+              class="d-flex flex-column flex-sm-row justify-content-center align-items-stretch align-items-sm-center gap-3 mb-4">
+              <a href="pages/services.html" class="btn btn-hero-primary btn-lg px-4 py-3 fw-bold">
+                Explore Care Packages <i class="fa-solid fa-arrow-right ms-2"></i>
+              </a>
+              <a href="pages/signin.html" class="btn btn-hero-secondary btn-lg px-4 py-3 fw-bold">
+                Join as a Nurse
+              </a>
+            </div>
+
+            <p class="hero-note mb-0">
+              <i class="fa-solid fa-shield-heart me-1 brand-mint"></i>
+              Connecting families with trusted nursing care on Re3aya, one step at a time.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Services Section Start -->
+    <section id="services" class="py-5">
+      <div class="container-fluid px-3 px-md-4">
+        <div class="services-box bg-white rounded-4 p-4 p-lg-5 border shadow-sm mx-auto">
+
+          <div class="text-center mb-4 pb-2">
+            <h2 class="fw-bold mb-2 services-heading">
+              <i class="fa-solid fa-hospital me-2"></i>Medical Care Delivered to Your Doorstep
+            </h2>
+            <p class="text-muted fs-5 mb-2">
+              Doctor visits, professional nursing, or home ICU — book instant home services or periodic care packages
+              online
+            </p>
+            <span class="services-heading small fw-medium">
+              <i class="fa-solid fa-magnifying-glass me-1"></i>Exclusively in partnership with <strong>Re3aya</strong>
+              Medical Network
+            </span>
+          </div>
+
+          <div class="row g-4">
+
+            <!-- Patient Card -->
+            <div class="col-12 col-md-6">
+              <div
+                class="card dark-card h-100 rounded-4 p-4 text-white shadow-sm text-center text-md-start d-flex flex-column">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 mb-3">
+                  <div class="icon-circle">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                  </div>
+                  <h3 class="fw-bold fs-3 mb-0">Patient &amp; Family</h3>
+                </div>
+
+                <p class="mb-4 lh-lg">
+                  Comprehensive medical care and periodic home follow-ups (lab sample collection, medication management,
+                  and vital signs tracking) for complete recovery and comfort at home.
+                </p>
+
+                <img src="img/patient_image.jpg" class="service-card-img mt-auto mb-3" alt="Patient Home Care">
+
+                <a href="pages/services.html" class="btn btn-light fw-bold w-100 rounded-3 py-2 brand-accent">
+                  Explore Care Packages <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Nurse Card -->
+            <div class="col-12 col-md-6">
+              <div class="card light-card h-100 rounded-4 p-4 shadow-sm text-center text-md-start d-flex flex-column">
+                <div class="d-flex flex-column flex-md-row align-items-center gap-3 mb-3">
+                  <div class="icon-circle">
+                    <i class="fa-solid fa-user-nurse"></i>
+                  </div>
+                  <h3 class="fw-bold fs-3 mb-0">Qualified Nurse</h3>
+                </div>
+
+                <p class="text-secondary mb-4 lh-lg">
+                  Join an elite network of certified nurses providing holistic home healthcare, administering
+                  medications, collecting lab samples, and monitoring patient vitals.
+                </p>
+
+                <img src="img/nurse_image.jpg" class="service-card-img mt-auto mb-3" alt="Professional Nurse">
+
+                <a href="pages/signin.html" class="btn btn-teal fw-bold w-100 rounded-3 py-2">
+                  Join Re3aya as a Nurse <i class="fa-solid fa-user-plus ms-1"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+
+          <div class="col-12 col-lg-6">
+            <img src="img/about us.png" class="img-fluid rounded-4 shadow w-100" alt="About Re3aya Platform">
+          </div>
+
+          <div class="col-12 col-lg-6 text-center text-lg-start">
+            <h6 class="brand-accent fw-bold mb-3">
+              <i class="fa-solid fa-heart-pulse me-2"></i>About Us
+            </h6>
+
+            <h2 class="display-6 fw-bold lh-base mb-3 text-dark">
+              Home Nursing Needs a Place
+              <span class="brand-accent d-block">That Connects the Right People</span>
+            </h2>
+
+            <p class="fw-bold text-dark mb-2">Need a dedicated nurse at home? Or are you a nurse looking for your next
+              opportunity?</p>
+
+            <p class="text-secondary lh-lg mb-4">
+              At <strong>Re3aya</strong>, we make getting started effortless. One unified platform bridging family
+              healthcare needs with professional nursing skills through a simple, trusted experience.
+            </p>
+
+            <div class="d-flex flex-column align-items-center align-items-lg-start gap-2 mb-4">
+              <div class="fw-medium">
+                <i class="fa-solid fa-user-nurse brand-accent me-2 fs-5"></i>Rewarding Opportunities for Certified
+                Nurses
+              </div>
+              <div class="fw-medium">
+                <i class="fa-solid fa-handshake brand-accent me-2 fs-5"></i>Seamless Matching &amp; Periodic Home
+                Follow-ups
+              </div>
+            </div>
+
+            <a href="pages/services.html" class="btn btn-teal btn-lg rounded-3 px-4 shadow-sm">
+              Discover Our Care Plans <i class="fa-solid fa-arrow-right ms-2"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+  </main>
+
+  <!-- Footer Start -->
+  <footer id="contact" class="footer pt-5 pb-4 text-light">
+    <div class="container">
+      <div class="row g-4 text-center text-md-start">
+
+        <div class="col-12 col-lg-4 col-md-6">
+          <h3 class="fw-bold text-white mb-3">Re<span class="brand-mint">3aya</span></h3>
+          <p class="text-secondary lh-lg mb-4">
+            A specialized platform providing trusted home nursing and medical care services with the highest standards
+            of quality and safety for you and your family.
+          </p>
+          <div class="social-links d-flex justify-content-center justify-content-md-start gap-2">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2 col-md-6">
+          <h5 class="text-white fw-bold mb-3">Quick Links</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/services.html">Services &amp; Packages</a></li>
+            <li><a href="#services">Find a Nurse</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="pages/login.html">Sign In</a></li>
+            <li><a href="pages/signin.html">Create Account</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2 col-md-6">
+          <h5 class="text-white fw-bold mb-3">Support &amp; Help</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-lg-4 col-md-6">
+          <h5 class="text-white fw-bold mb-3">Newsletter</h5>
+          <p class="text-secondary mb-3">Subscribe to our newsletter for the latest medical tips and exclusive care
+            offers.</p>
+          <form action="#" class="d-flex">
+            <input type="email" class="form-control rounded-0 rounded-start bg-secondary-subtle border-0"
+              placeholder="Enter your email address" required>
+            <button class="btn btn-teal rounded-0 rounded-end px-3" type="submit" aria-label="Subscribe">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <hr class="border-secondary my-4">
+      <div
+        class="d-flex flex-column flex-md-row justify-content-between align-items-center text-secondary small gap-2 text-center">
+        <p class="mb-0">© 2025 Re3aya. All rights reserved.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="#">Privacy Policy</a>
+          <span>•</span>
+          <a href="#">Terms of Service</a>
+          <span>•</span>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
 
 </body>
+
 </html>
-```
