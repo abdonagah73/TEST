@@ -1,52 +1,224 @@
+/* =========================================
+   Re3aya - Unified Home Page Stylesheet (LTR)
+   ========================================= */
 
-/* 1. الخط الأساسي للموقع */
-body {
-  font-family: 'Rubik', sans-serif;
-  background-color: #F7FAFA;
+:root {
+  --re3aya-primary: #247C86;
+  --re3aya-primary-dark: #1B5E66;
+  --re3aya-dark: #163B46;
+  --re3aya-mint: #55B89A;
+  --re3aya-mint-light: #77dfc6;
+  --re3aya-light-bg: #EAF6F5;
+  --re3aya-body-bg: #F7FAFA;
+  --re3aya-text-muted: #64748B;
 }
 
-/* 2. شريط التنقل (Navbar) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 1. Base Typography & Body */
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--re3aya-body-bg);
+  color: #1E293B;
+  overflow-x: hidden;
+}
+
+/* Re3aya Brand Colors */
+.brand-accent {
+  color: var(--re3aya-primary) !important;
+}
+
+.brand-mint {
+  color: var(--re3aya-mint) !important;
+}
+
+.btn-teal {
+  background-color: var(--re3aya-primary);
+  border-color: var(--re3aya-primary);
+  color: #ffffff;
+  transition: all 0.25s ease;
+}
+
+.btn-teal:hover,
+.btn-teal:focus {
+  background-color: var(--re3aya-primary-dark);
+  border-color: var(--re3aya-primary-dark);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-outline-teal {
+  color: var(--re3aya-primary);
+  border: 1.5px solid var(--re3aya-primary);
+  background-color: transparent;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-teal:hover,
+.btn-outline-teal:focus {
+  background-color: var(--re3aya-primary);
+  border-color: var(--re3aya-primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* 2. Navigation Bar (Navbar) */
 .nav .nav-link {
-  color: #64748B;
+  color: var(--re3aya-text-muted);
   font-weight: 500;
+  padding: 0.45rem 0.85rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
 }
 
 .nav .nav-link:hover,
 .nav .nav-link.active {
-  color: #247C86 !important;
+  color: var(--re3aya-primary) !important;
+  background-color: var(--re3aya-light-bg);
   font-weight: 600;
 }
 
-/* 3. قسم الخدمات (Services) */
+@media (max-width: 991.98px) {
+  .nav-mobile-divider {
+    border-top: 1px solid #E2E8F0;
+  }
+}
+
+@media (min-width: 992px) {
+  .w-lg-auto {
+    width: auto !important;
+  }
+}
+
+/* 3. Hero Section (Centered Content) */
+.hero-section {
+  min-height: calc(100vh - 72px);
+  min-height: calc(100svh - 72px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(16, 43, 51, 0.84) 0%,
+      rgba(22, 59, 70, 0.78) 55%,
+      rgba(16, 43, 51, 0.88) 100%
+    ),
+    url("../img/nurse-heart.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  color: var(--re3aya-mint-light);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  background: rgba(119, 223, 198, 0.14);
+  border: 1px solid rgba(119, 223, 198, 0.35);
+  padding: 0.45rem 1.15rem;
+  border-radius: 50rem;
+}
+
+.hero-title {
+  font-size: clamp(2.25rem, 5vw, 3.85rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.hero-highlight {
+  color: var(--re3aya-mint-light);
+}
+
+.hero-description {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.btn-hero-primary {
+  background-color: var(--re3aya-mint);
+  color: #0d2b26;
+  border: 1px solid var(--re3aya-mint);
+  border-radius: 0.75rem;
+  transition: all 0.25s ease;
+}
+
+.btn-hero-primary:hover {
+  background-color: var(--re3aya-mint-light);
+  border-color: var(--re3aya-mint-light);
+  color: #0d2b26;
+  transform: translateY(-3px);
+}
+
+.btn-hero-secondary {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(4px);
+  transition: all 0.25s ease;
+}
+
+.btn-hero-secondary:hover {
+  background: rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.hero-note {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.92rem;
+}
+
+/* 4. Services Section (Balanced Size) */
 .services-box {
-  max-width: 900px;
+  width: 100%;
+  max-width: 1240px;
+  border-color: #D2E8E6 !important;
 }
 
-/* الكارت الغامق (مريض) */
+.services-heading {
+  color: var(--re3aya-primary);
+}
+
+/* Patient Card (Dark Teal) */
 .dark-card {
-  background-color: #247C86;
+  background: linear-gradient(145deg, #247C86 0%, #1B5E66 100%);
+  border: 2px solid #247C86 !important;
 }
 
-/* الكارت الفاتح (ممرض) */
+/* Nurse Card (Light Teal) */
 .light-card {
-  background-color: #EAF6F5;
-  border-color: #B8DEDA !important;
+  background-color: var(--re3aya-light-bg);
+  border: 2px solid #B8DEDA !important;
   color: #334155;
 }
 
 .light-card h3 {
-  color: #247C86;
+  color: var(--re3aya-primary);
 }
 
-/* دائرة الأيقونة فوق العنوان في الكروت */
+/* Card Icon Circle */
 .icon-circle {
-  width: 46px;
-  height: 46px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  flex-shrink: 0;
 }
 
 .dark-card .icon-circle {
@@ -56,28 +228,29 @@ body {
 
 .light-card .icon-circle {
   background-color: #D1F0E5;
-  color: #247C86;
+  color: var(--re3aya-primary);
 }
 
-/* صور الكروت */
-.card img {
+/* Card Image */
+.service-card-img {
   width: 100%;
-  height: 185px;
+  height: 215px;
   object-fit: cover;
+  border-radius: 0.85rem;
 }
 
-/* تأثير خفيف عند تمرير الماوس على الكارت */
+/* Card Hover Effect */
 .card {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
-/* 4. قسم لمحة عنا (About) */
+/* 5. About Us Section */
 #about {
-  background-color: #EAF6F5;
+  background-color: var(--re3aya-light-bg);
 }
 
 #about img {
@@ -85,13 +258,12 @@ body {
   object-fit: cover;
 }
 
-/* 5. الفوتر (Footer) */
+/* 6. Footer */
 .footer {
-  background-color: #163B46;
-  border-top: 3px solid #55B89A;
+  background-color: var(--re3aya-dark);
+  border-top: 3px solid var(--re3aya-mint);
 }
 
-/* روابط الفوتر */
 .footer a {
   color: #B8D1D5;
   text-decoration: none;
@@ -102,20 +274,21 @@ body {
   color: #ffffff;
 }
 
-/* أزرار مواقع التواصل الاجتماعي الدائرية */
 .social-links a {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.25);
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.25s ease;
 }
 
 .social-links a:hover {
-  background-color: #55B89A;
-  border-color: #55B89A;
+  background-color: var(--re3aya-mint);
+  border-color: var(--re3aya-mint);
+  color: #0d2b26;
   transform: translateY(-3px);
 }
